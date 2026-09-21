@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import "./Header.css";
 
-import Contact from "../Contact/Contact";
 import Logo from "../../assets/icons/hurmo_research_mainlogo.svg";
 
 // Absolute targets so the nav also works from a solution page, not just home.
@@ -47,11 +46,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          {/* {isOpen && (
-            <div className="navbar__contacts">
-              <Contact />
-            </div>
-          )} */}
         </nav>
       </div>
     </header>
