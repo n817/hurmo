@@ -1,11 +1,11 @@
-.ranking-form {
+.survey-form {
   display: flex;
   flex-direction: column;
   gap: 48px;
   width: 100%;
 }
 
-.ranking-form__group {
+.survey-form__group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -15,32 +15,33 @@
   border: none;
 }
 
-.ranking-form__legend {
+.survey-form__legend {
   padding: 0;
   font-size: var(--font-size-xl);
   font-weight: 600;
 }
 
-.ranking-form__hint {
+.survey-form__hint {
   color: var(--color-text-secondary);
   font-size: var(--font-size-secondary);
 }
 
-.ranking-form__rows {
+.survey-form__rows {
   display: flex;
   flex-direction: column;
   gap: 12px;
   width: 100%;
 }
 
-.ranking-form__row {
+.survey-form__row {
   display: flex;
   align-items: center;
   gap: 8px;
+  width: 100%;
 }
 
-.ranking-form__input,
-.ranking-form__select {
+.survey-form__input,
+.survey-form__select {
   width: 100%;
   padding: 14px 16px;
   border: 1px solid #d9d9d9;
@@ -51,13 +52,13 @@
   font-size: var(--font-size-secondary);
 }
 
-.ranking-form__input:focus,
-.ranking-form__select:focus {
+.survey-form__input:focus,
+.survey-form__select:focus {
   outline: none;
   border-color: var(--color-blue);
 }
 
-.ranking-form__remove {
+.survey-form__remove {
   flex-shrink: 0;
   width: 36px;
   height: 36px;
@@ -70,12 +71,12 @@
   line-height: 1;
 }
 
-.ranking-form__remove:hover {
+.survey-form__remove:hover {
   background-color: #f5f5f5;
   color: var(--color-text-primary);
 }
 
-.ranking-form__add {
+.survey-form__add {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -88,7 +89,7 @@
   font-weight: 500;
 }
 
-.ranking-form__add-icon {
+.survey-form__add-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -101,45 +102,45 @@
   line-height: 1;
 }
 
-.ranking-form__checkboxes {
+.survey-form__checkboxes {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 8px;
 }
 
-.ranking-form__checkbox {
+.survey-form__checkbox {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: var(--font-size-secondary);
 }
 
-.ranking-form__checkbox input {
+.survey-form__checkbox input {
   width: 18px;
   height: 18px;
   accent-color: var(--color-blue);
 }
 
-.ranking-form__selects {
+.survey-form__selects {
   display: flex;
   gap: 20px;
   width: 100%;
 }
 
-.ranking-form__field {
+.survey-form__field {
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 100%;
 }
 
-.ranking-form__label {
+.survey-form__label {
   font-size: var(--font-size-secondary);
   font-weight: 600;
 }
 
-.ranking-form__submit {
+.survey-form__submit {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -149,76 +150,105 @@
   background-color: #f7f7f7;
 }
 
-.ranking-form__error {
+.survey-form__error {
   color: #d64524;
   font-size: var(--font-size-secondary);
 }
 
-.ranking-form__note {
+.survey-form__note {
   color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
 }
 
 /* 16px keeps iOS Safari from zooming in when a field takes focus. */
-.ranking-form__input,
-.ranking-form__select {
+.survey-form__input,
+.survey-form__select {
   font-size: max(var(--font-size-secondary), 16px);
 }
 
-.ranking-form__launch {
+.survey-form__launch {
   min-height: 48px;
 }
 
+.survey-form__total-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.survey-form__total {
+  font-size: var(--font-size-large);
+}
+
+.survey-form__total-label {
+  font-weight: 600;
+}
+
+.survey-form__total-value {
+  color: var(--color-blue);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 @media screen and (max-width: 600px) {
-  .ranking-form {
+  .survey-form {
     gap: 36px;
   }
 
-  .ranking-form__legend {
+  .survey-form__legend {
     font-size: var(--font-size-large);
   }
 
-  .ranking-form__selects {
+  .survey-form__selects {
     flex-direction: column;
   }
 
-  .ranking-form__submit {
+  .survey-form__submit {
     padding: 20px;
   }
 
   /* Comfortable touch targets: ~44px for every control you tap. */
-  .ranking-form__remove {
+  .survey-form__remove {
     width: 44px;
     height: 44px;
     font-size: var(--font-size-xl);
   }
 
-  .ranking-form__add {
+  .survey-form__add {
     min-height: 44px;
     padding: 4px 0;
   }
 
-  .ranking-form__add-icon {
+  .survey-form__add-icon {
     width: 24px;
     height: 24px;
     font-size: var(--font-size-secondary);
   }
 
-  .ranking-form__checkboxes {
+  .survey-form__checkboxes {
     gap: 2px;
   }
 
-  .ranking-form__checkbox {
+  .survey-form__checkbox {
     gap: 12px;
     min-height: 44px;
   }
 
-  .ranking-form__checkbox input {
+  .survey-form__checkbox input {
     width: 22px;
     height: 22px;
   }
 
-  .ranking-form__launch {
+  .survey-form__total-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .survey-form__launch {
     width: 100%;
   }
 }

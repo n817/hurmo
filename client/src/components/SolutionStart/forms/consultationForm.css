@@ -1,0 +1,39 @@
+.consultation__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 62ch;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-large);
+  line-height: 1.6;
+}
+
+/* Two fields per row on desktop, one on mobile. */
+.consultation__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.consultation__topic {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+/* Nothing to edit here — it states what is being ordered. */
+.survey-form__input[readonly] {
+  background-color: #f7f7f7;
+  color: var(--color-text-secondary);
+}
+
+@media screen and (max-width: 600px) {
+  .consultation__intro {
+    font-size: var(--font-size-secondary);
+  }
+
+  .consultation__grid {
+    grid-template-columns: 1fr;
+  }
+}
