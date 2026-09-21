@@ -1,22 +1,21 @@
 import "./App.css";
 
-import { Header } from "../Header/Header";
-import { Hero } from "../Hero/Hero";
-import { Projects } from "../Projects/Projects";
-import { Skills } from "../Skills/Skills";
-import { Footer } from "../Footer/Footer";
+import { Route, Routes } from "react-router-dom";
+
+import { Layout } from "../Layout/Layout";
+import { Home } from "../Home/Home";
+import { SolutionStart } from "../SolutionStart/SolutionStart";
+import { NotFound } from "../NotFound/NotFound";
 
 function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <Projects />
-        <Skills />
-      </main>
-      <Footer />
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="start/:solutionId" element={<SolutionStart />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 }
 

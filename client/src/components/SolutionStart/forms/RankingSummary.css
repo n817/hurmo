@@ -1,0 +1,99 @@
+.ranking-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 32px;
+  border: var(--border-project-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-elevated);
+  /* Clears the sticky header when scrolled into view. */
+  scroll-margin-top: 90px;
+}
+
+.ranking-summary__title {
+  font-size: var(--font-size-xl);
+}
+
+.ranking-summary__hint {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-secondary);
+}
+
+.ranking-summary__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  margin: 12px 0 0;
+}
+
+.ranking-summary__entry {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid #eef4ff;
+}
+
+.ranking-summary__term {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-secondary);
+}
+
+.ranking-summary__value {
+  margin: 0;
+  font-size: var(--font-size-secondary);
+  overflow-wrap: anywhere;
+}
+
+.ranking-summary__items {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ranking-summary__empty {
+  color: var(--color-text-secondary);
+}
+
+.ranking-summary__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ranking-summary__note {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+@media screen and (max-width: 600px) {
+  .ranking-summary {
+    padding: 20px;
+  }
+
+  .ranking-summary__title {
+    font-size: var(--font-size-large);
+  }
+
+  /* Stack term over value so long answers keep the full width. */
+  .ranking-summary__entry {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .ranking-summary__actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .ranking-summary__action {
+    width: 100%;
+  }
+}

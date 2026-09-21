@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./Hero.css";
 
 import heroIllustration from "../../assets/hero/hero.jpeg";
@@ -16,12 +18,12 @@ export function Hero() {
           </p>
           
           <div className="hero__actions">
-            <a className="button button_primary" href="#solutions">
+            <Link className="button button_primary" to="/#solutions">
               Explore Solutions <span className="arrow">→</span>
-            </a>
-            <a className="button button_secondary" href="#contacts">
+            </Link>
+            <Link className="button button_secondary" to="/#contacts">
               Contact Us
-            </a>
+            </Link>
           </div>
           
           <p className="hero__trust">
