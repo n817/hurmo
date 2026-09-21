@@ -1,0 +1,224 @@
+.ranking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+}
+
+.ranking-form__group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.ranking-form__legend {
+  padding: 0;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+
+.ranking-form__hint {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-secondary);
+}
+
+.ranking-form__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.ranking-form__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ranking-form__input,
+.ranking-form__select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: var(--border-radius);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: inherit;
+  font-size: var(--font-size-secondary);
+}
+
+.ranking-form__input:focus,
+.ranking-form__select:focus {
+  outline: none;
+  border-color: var(--color-blue);
+}
+
+.ranking-form__remove {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-large);
+  line-height: 1;
+}
+
+.ranking-form__remove:hover {
+  background-color: #f5f5f5;
+  color: var(--color-text-primary);
+}
+
+.ranking-form__add {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-blue);
+  font-family: inherit;
+  font-size: var(--font-size-secondary);
+  font-weight: 500;
+}
+
+.ranking-form__add-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-blue);
+  color: #ffffff;
+  font-size: var(--font-size-sm);
+  line-height: 1;
+}
+
+.ranking-form__checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.ranking-form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-size-secondary);
+}
+
+.ranking-form__checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-blue);
+}
+
+.ranking-form__selects {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.ranking-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.ranking-form__label {
+  font-size: var(--font-size-secondary);
+  font-weight: 600;
+}
+
+.ranking-form__submit {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 32px;
+  border-radius: var(--border-radius);
+  background-color: #f7f7f7;
+}
+
+.ranking-form__error {
+  color: #d64524;
+  font-size: var(--font-size-secondary);
+}
+
+.ranking-form__note {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* 16px keeps iOS Safari from zooming in when a field takes focus. */
+.ranking-form__input,
+.ranking-form__select {
+  font-size: max(var(--font-size-secondary), 16px);
+}
+
+.ranking-form__launch {
+  min-height: 48px;
+}
+
+@media screen and (max-width: 600px) {
+  .ranking-form {
+    gap: 36px;
+  }
+
+  .ranking-form__legend {
+    font-size: var(--font-size-large);
+  }
+
+  .ranking-form__selects {
+    flex-direction: column;
+  }
+
+  .ranking-form__submit {
+    padding: 20px;
+  }
+
+  /* Comfortable touch targets: ~44px for every control you tap. */
+  .ranking-form__remove {
+    width: 44px;
+    height: 44px;
+    font-size: var(--font-size-xl);
+  }
+
+  .ranking-form__add {
+    min-height: 44px;
+    padding: 4px 0;
+  }
+
+  .ranking-form__add-icon {
+    width: 24px;
+    height: 24px;
+    font-size: var(--font-size-secondary);
+  }
+
+  .ranking-form__checkboxes {
+    gap: 2px;
+  }
+
+  .ranking-form__checkbox {
+    gap: 12px;
+    min-height: 44px;
+  }
+
+  .ranking-form__checkbox input {
+    width: 22px;
+    height: 22px;
+  }
+
+  .ranking-form__launch {
+    width: 100%;
+  }
+}

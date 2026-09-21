@@ -1,16 +1,17 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./Header.css";
 
-// import { profile } from "../../data/profile.ts";
 import Contact from "../Contact/Contact";
-import Logo from "../../assets/icons/hurmo_research_mainlogo.svg"
+import Logo from "../../assets/icons/hurmo_research_mainlogo.svg";
 
+// Absolute targets so the nav also works from a solution page, not just home.
 const links = [
-  { href: "#about", label: "Home" },
-  { href: "#solutions", label: "Solutions" },
-  { href: "#clients", label: "Clients" },
-  { href: "#contacts", label: "Contacts" },
+  { to: "/#about", label: "Home" },
+  { to: "/#solutions", label: "Solutions" },
+  { to: "/#clients", label: "Clients" },
+  { to: "/#contacts", label: "Contacts" },
 ];
 
 export function Header() {
@@ -19,13 +20,9 @@ export function Header() {
   return (
     <header className="header">
       <div className={`navbar ${isOpen ? "navbar_open" : ""}`}>
-        <a
-          className="navbar__brand"
-          href="#home"
-          onClick={() => setIsOpen(false)}
-        >
+        <Link className="navbar__brand" to="/" onClick={() => setIsOpen(false)}>
           <img src={Logo} alt="Logo" className="navbar__logo" />
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -41,14 +38,14 @@ export function Header() {
           className={`navbar__links${isOpen ? " navbar__links_open" : ""}`}
         >
           {links.map((link) => (
-            <a
+            <Link
               className="navbar__link"
-              key={link.href}
-              href={link.href}
+              key={link.to}
+              to={link.to}
               onClick={() => setIsOpen(false)}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           {isOpen && (
             <div className="navbar__contacts">

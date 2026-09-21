@@ -85,6 +85,8 @@ button {
 
 .section {
   padding: 0 24px;
+  /* Keep anchor targets clear of the sticky header. */
+  scroll-margin-top: 80px;
 }
 
 .section__inner {

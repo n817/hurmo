@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import type { Project } from "../../types";
 import "./ProjectCard.css";
 
@@ -21,13 +23,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
         <div className="project-card__links">
-          <a
-            href={project.githubUrl}
-            rel="noreferrer"
+          <Link
+            to={`/start/${project.id}`}
             className="button button_primary"
+            aria-label={`Start the ${project.name} brief`}
           >
             Start
-          </a>
+          </Link>
         </div>
       </div>
     </li>

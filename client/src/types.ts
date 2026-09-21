@@ -15,8 +15,6 @@ export interface Project {
   name: string;
   description: string[];
   image: string;
-  githubUrl: string;
-  liveUrl: string;
 }
 
 export interface ClientGroup {
