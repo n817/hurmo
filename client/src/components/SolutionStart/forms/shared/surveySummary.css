@@ -1,4 +1,4 @@
-.ranking-summary {
+.survey-summary {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -12,16 +12,16 @@
   scroll-margin-top: 90px;
 }
 
-.ranking-summary__title {
+.survey-summary__title {
   font-size: var(--font-size-xl);
 }
 
-.ranking-summary__hint {
+.survey-summary__hint {
   color: var(--color-text-secondary);
   font-size: var(--font-size-secondary);
 }
 
-.ranking-summary__list {
+.survey-summary__list {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -29,7 +29,7 @@
   margin: 12px 0 0;
 }
 
-.ranking-summary__entry {
+.survey-summary__entry {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 16px;
@@ -37,18 +37,18 @@
   border-top: 1px solid #eef4ff;
 }
 
-.ranking-summary__term {
+.survey-summary__term {
   color: var(--color-text-secondary);
   font-size: var(--font-size-secondary);
 }
 
-.ranking-summary__value {
+.survey-summary__value {
   margin: 0;
   font-size: var(--font-size-secondary);
   overflow-wrap: anywhere;
 }
 
-.ranking-summary__items {
+.survey-summary__items {
   margin: 0;
   padding-left: 20px;
   display: flex;
@@ -56,11 +56,21 @@
   gap: 4px;
 }
 
-.ranking-summary__empty {
+.survey-summary__empty {
   color: var(--color-text-secondary);
 }
 
-.ranking-summary__actions {
+.survey-summary__entry_total {
+  border-top-width: 2px;
+}
+
+.survey-summary__total {
+  color: var(--color-blue);
+  font-size: var(--font-size-large);
+  font-weight: 600;
+}
+
+.survey-summary__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -68,32 +78,42 @@
   margin-top: 20px;
 }
 
-.ranking-summary__note {
+.survey-summary__note {
   color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
 }
 
 @media screen and (max-width: 600px) {
-  .ranking-summary {
+  .survey-summary {
     padding: 20px;
   }
 
-  .ranking-summary__title {
+  .survey-summary__title {
     font-size: var(--font-size-large);
   }
 
   /* Stack term over value so long answers keep the full width. */
-  .ranking-summary__entry {
+  .survey-summary__entry {
     grid-template-columns: 1fr;
     gap: 4px;
   }
 
-  .ranking-summary__actions {
+  .survey-summary__entry_total {
+  border-top-width: 2px;
+}
+
+.survey-summary__total {
+  color: var(--color-blue);
+  font-size: var(--font-size-large);
+  font-weight: 600;
+}
+
+.survey-summary__actions {
     flex-direction: column-reverse;
     gap: 10px;
   }
 
-  .ranking-summary__action {
+  .survey-summary__action {
     width: 100%;
   }
 }
