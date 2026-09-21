@@ -1,0 +1,38 @@
+.projects {
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.projects__grid {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(214px, 1fr));
+  gap: 32px;
+}
+
+.projects__show-more {
+  position: absolute;
+  bottom: 29px;
+  left: calc(50% - 90px);
+}
+
+@media screen and (max-width: 1200px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, minmax(214px, 1fr));
+  }
+
+  .projects__show-more {
+    left: calc(50% - 150px);
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .projects__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}

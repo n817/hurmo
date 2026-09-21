@@ -1,0 +1,30 @@
+.footer {
+  padding: 160px 0;
+  background-image: linear-gradient(rgba(42,44,47,.3), rgba(42,44,47,.3)), url(../../assets/background/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer__inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  padding: 0 0 36px;
+}
+
+.footer__blurb {
+  max-width: 500px;
+  color: var(--color-text-contacts);
+  font-size: var(--font-size-secondary);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__blurb {
+    font-size: var(--font-size-sm);
+  }
+}

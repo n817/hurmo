@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="RecipeBox screenshot placeholder">
+  <rect width="800" height="500" fill="#f2f1ee" />
+  <rect x="0" y="0" width="800" height="64" fill="#8754fd" />
+  <circle cx="32" cy="32" r="8" fill="#ffffff" />
+  <rect x="56" y="24" width="140" height="16" rx="4" fill="#ffffff" opacity="0.9" />
+  <g fill="#ffffff">
+    <rect x="48" y="104" width="168" height="200" rx="12" opacity="0.9" />
+    <rect x="232" y="104" width="168" height="200" rx="12" opacity="0.9" />
+    <rect x="416" y="104" width="168" height="200" rx="12" opacity="0.9" />
+    <rect x="600" y="104" width="152" height="200" rx="12" opacity="0.9" />
+    <rect x="48" y="320" width="704" height="84" rx="12" opacity="0.9" />
+  </g>
+  <g fill="rgb(0 0 0 / 0.14)">
+    <rect x="48" y="264" width="168" height="24" rx="6" />
+    <rect x="232" y="264" width="168" height="24" rx="6" />
+    <rect x="416" y="264" width="168" height="24" rx="6" />
+  </g>
+  <text x="400" y="460" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#1a1a1a" text-anchor="middle">RecipeBox</text>
+</svg>
