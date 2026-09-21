@@ -47,11 +47,11 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          {isOpen && (
+          {/* {isOpen && (
             <div className="navbar__contacts">
               <Contact />
             </div>
-          )}
+          )} */}
         </nav>
       </div>
     </header>
