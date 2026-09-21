@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="WeatherNow screenshot placeholder">
+  <rect width="800" height="500" fill="#f2f1ee" />
+  <rect x="0" y="0" width="800" height="64" fill="#328f51" />
+  <circle cx="32" cy="32" r="8" fill="#ffffff" />
+  <rect x="56" y="24" width="140" height="16" rx="4" fill="#ffffff" opacity="0.9" />
+  <g fill="#ffffff">
+    <rect x="48" y="104" width="320" height="300" rx="12" opacity="0.9" />
+    <rect x="392" y="104" width="360" height="140" rx="12" opacity="0.9" />
+    <rect x="392" y="264" width="360" height="140" rx="12" opacity="0.9" />
+  </g>
+  <circle cx="208" cy="200" r="48" fill="#f48e00" opacity="0.85" />
+  <g fill="rgb(0 0 0 / 0.14)">
+    <rect x="88" y="280" width="240" height="12" rx="6" />
+    <rect x="88" y="308" width="180" height="10" rx="5" />
+    <rect x="424" y="140" width="200" height="12" rx="6" />
+    <rect x="424" y="300" width="200" height="12" rx="6" />
+  </g>
+  <text x="400" y="460" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#1a1a1a" text-anchor="middle">WeatherNow</text>
+</svg>

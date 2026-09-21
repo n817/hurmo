@@ -1,0 +1,172 @@
+.hero {
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-secondary) -72.42%,
+    var(--color-bg-primary) 100%
+  );
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Контентная часть (левая на десктопе) */
+.hero__content {
+  flex: 1;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left; /* Текст слева для десктопа */
+}
+
+/* Надзаголовок с градиентом */
+.hero__eyebrow {
+  background: linear-gradient(90deg, rgb(235, 90, 62) 0%, rgb(184, 51, 24) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+/* Главный заголовок */
+.hero__title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+
+/* Описание */
+.hero__description {
+  color: #4b5563;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+
+/* Контейнер для кнопок */
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  width: 100%; /* Подготовка для мобильной версии */
+}
+
+/* Текст доверия под кнопками */
+.hero__trust {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Блок с иллюстрацией */
+.hero__illustration {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero__illustration img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =========================================
+   Адаптивность (Планшеты)
+   ========================================= */
+@media (max-width: 1200px) {
+  .hero__title {
+    font-size: 42px;
+  }
+  .hero__inner {
+    gap: 20px;
+  }
+  .hero__description {
+    font-size: 16px;
+  }
+}
+
+/* =========================================
+   Адаптивность (Мобильные устройства)
+   Идеальное соответствие мобильному макету
+   ========================================= */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .hero__inner {
+    flex-direction: column; /* Вертикальный стек */
+    text-align: center;
+  }
+
+  .hero__content {
+    align-items: center; /* Центрируем элементы внутри флекс-контейнера */
+    text-align: center; /* Центрируем текст */
+    max-width: 100%;
+  }
+
+  .hero__title {
+    font-size: 36px;
+  }
+
+  .hero__description {
+    font-size: 15px;
+    padding: 0 10px; /* Немного сжимаем текст с боков для лучшей читаемости */
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  /* Иллюстрация переносится вниз и центрируется */
+  .hero__illustration {
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .hero__illustration img {
+    max-width: 90%; /* Чтобы картинка не прилипала к краям экрана */
+  }
+}
+
+/* Телефоны (меньше 480px) */
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 32px;
+  }
+
+  /* Кнопки выстраиваются в колонку и занимают 100% ширины */
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}

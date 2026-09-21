@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="TaskFlow screenshot placeholder">
+  <rect width="800" height="500" fill="#f2f1ee" />
+  <rect x="0" y="0" width="800" height="64" fill="#1878dc" />
+  <circle cx="32" cy="32" r="8" fill="#ffffff" />
+  <rect x="56" y="24" width="140" height="16" rx="4" fill="#ffffff" opacity="0.9" />
+  <g fill="#ffffff">
+    <rect x="48" y="104" width="220" height="300" rx="12" opacity="0.9" />
+    <rect x="292" y="104" width="220" height="220" rx="12" opacity="0.9" />
+    <rect x="536" y="104" width="220" height="180" rx="12" opacity="0.9" />
+  </g>
+  <g fill="rgb(0 0 0 / 0.14)">
+    <rect x="68" y="128" width="180" height="12" rx="6" />
+    <rect x="68" y="156" width="140" height="10" rx="5" />
+    <rect x="68" y="184" width="160" height="10" rx="5" />
+    <rect x="312" y="128" width="180" height="12" rx="6" />
+    <rect x="312" y="156" width="120" height="10" rx="5" />
+    <rect x="556" y="128" width="180" height="12" rx="6" />
+    <rect x="556" y="156" width="150" height="10" rx="5" />
+  </g>
+  <text x="400" y="460" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#1a1a1a" text-anchor="middle">TaskFlow</text>
+</svg>

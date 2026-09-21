@@ -1,0 +1,131 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-bg-primary);
+}
+
+.navbar {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__brand {
+  font-weight: 600;
+  font-size: var(--font-size-secondary);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.navbar__logo {
+  height: 50px;
+  width: 125pxpx;
+}
+
+.navbar__brand:hover {
+  color: var(--color-blue);
+}
+
+.navbar__links {
+  display: flex;
+  gap: 32px;
+}
+
+.navbar__link {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-primary);
+  text-decoration: none;
+}
+
+.navbar__link:hover {
+  color: var(--color-text-primary);
+}
+
+.navbar__toggle {
+  display: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: none;
+  background-image: url(../../assets/icons/menu.png);
+  background-repeat: no-repeat;
+}
+
+.navbar__toggle:hover {
+  background-image: url(../../assets/icons/menu-hover.png);
+}
+
+.navbar__toggle_close {
+  background-image: url(../../assets/icons/menu-close.png);
+}
+
+.navbar__toggle_close:hover {
+  background-image: url(../../assets/icons/menu-close-hover.png);
+}
+
+.navbar__contacts {
+  display: none;
+  position: absolute;
+  bottom: 108px;
+  margin: 0 auto;
+  width: 100%;
+  border-top: 1px solid #eef4ff;
+  padding-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar_open {
+    border-bottom: 1px solid #eef4ff;
+  }
+
+  .navbar__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--color-bg-primary);
+    border-bottom: 1px solid var(--color-border);
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .navbar__link {
+    padding: 16px 24px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .navbar__links_open {
+    max-height: 100vh;
+    height: 100vh;
+    padding: 64px 0 0;
+    gap: 32px;
+  }
+
+  .navbar__links_open .navbar__link {
+    padding-left: 40px;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  .navbar__links_open .navbar__link:hover,
+  .navbar__links_open .navbar__link:active {
+    color: var(--color-blue);
+  }
+
+  .navbar__contacts {
+    display: block;
+  }
+}
