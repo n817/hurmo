@@ -14,7 +14,7 @@ export function Hero() {
             Transforming Data<br />Into Growth
           </h1>
           <p className="hero__description">
-            We build bridges between people and brands. Get deep consumer understanding and optimize your business strategies with Uzbekistan's leading market research company.
+            We build bridges between people and brands.<br /> Get deep consumer understanding and optimize your business strategies with Uzbekistan's leading market research company.
           </p>
           
           <div className="hero__actions">
